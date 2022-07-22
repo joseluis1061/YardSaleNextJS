@@ -1,9 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
-import AppContext from '@context/AppContext';
-import {OrderItem} from '@components/OrderItem';
-import flechita from '@icons/flechita.svg';
-import '../styles/MyOrder.scss';
+import AppContext from '../context/AppContext';
+import {OrderItem} from '../components/OrderItem';
+import flechita from '../assets/icons/flechita.svg';
+//import '../styles/MyOrder.scss';
+import styles from '../styles/MyOrder.module.scss';
 
 export const MyOrder = () => {
 	const {state} = useContext(AppContext);
@@ -17,25 +18,25 @@ export const MyOrder = () => {
 	}
 
   return (
-    <aside className="MyOrder">
-			<div className="title-container">
+    <aside className={styles.MyOrder}>
+			<div className={styles['title-container']}>
 				<img src={flechita} alt="arrow" />
-				<p className="title">My order</p>
+				<p className={styles['title']}>My order</p>
 			</div>
-			<div className="my-order-content">
+			<div className={styles['my-order-content']}>
 				{state.cart.map((product)=>
 					<OrderItem
 						key = {`order-item-${product.id}`}
 						product={product}
 					/>
 				)}
-				<div className="order">
+				<div className={styles['order']}>
 					<p>
 						<span>Total</span>
 					</p>
 					<p>${sumTotal()}</p>
 				</div>
-				<button className="primary-button">
+				<button className={styles['primary-button']}>
 					Checkout
 				</button>
 			</div>

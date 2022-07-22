@@ -15,16 +15,16 @@ export const Login = () => {
 		console.log(data);
 	};
   return (
-    <div className="Login">
-			<div className="Login-container">
-				<img src={logoYardSale} alt="logo" className="logo" />
-				<form action="/" className="form" ref={formulario}>
-					<label htmlFor="email" className="label">Email address</label>
-					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
-					<label htmlFor="password" className="label">Password</label>
-					<input type="password" name="password" placeholder="*********" className="input input-password" />
+    <div className={styles.Login}>
+			<div className={styles.Login-container}>
+				<img src={logoYardSale} alt="logo" className={styles.logo} />
+				<form action="/" className={styles.form} ref={formulario}>
+					<label htmlFor="email" className={styles.label}>Email address</label>
+					<input type="text" name="email" placeholder="platzi@example.cm" className={styles.input input-email} />
+					<label htmlFor="password" className={styles.label">Password</label>
+					<input type="password" name="password" placeholder="*********" className={styles.input input-password} />
 					<button 
-						className="primary-button login-button" 
+						className={styles.primary-button login-button} 
 						onClick={handleSubmit}
 					>
 						Log in
@@ -32,7 +32,7 @@ export const Login = () => {
 
 					<a href="/">Forgot my password</a>
 				</form>
-				<button className="secondary-button signup-button">Sign up</button>
+				<button className={styles.secondary-button signup-button}>Sign up</button>
 			</div>
 		</div>
 	);

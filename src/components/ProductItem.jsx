@@ -11,9 +11,9 @@ export const ProductItem = ({product}) => {
 		addToCart(item);
 	};
   return (
-    <div className="ProductItem">
+    <div className={styles.ProductItem}>
 			<img src={product.images[0]} alt={product.title} />
-			<div className="product-info">
+			<div className={styles['product-info']}>
 				<div>
 					<p>${product.price}</p>
 					<p>{product.title}</p>
