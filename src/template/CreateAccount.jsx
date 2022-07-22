@@ -9,13 +9,13 @@ export const CreateAccount = () => {
         <form action="/" className={styles.form}>
           <div>
             <label for="name" className={styles.label}>Name</label>
-            <input type="text" id="name" placeholder="Teff" className={styles.input.input-name} />
+            <input type="text" id="name" placeholder="Teff" className={styles['input input-name']} />
             <label for="email" className={styles.label}>Email</label>
-            <input type="text" id="email" placeholder="platzi@example.com" className={styles.input input-email} />
-            <label for="password" className={styles.label">Password</label>
-            <input type="password" id="password" placeholder="*********" className={styles.input input-password} />
+            <input type="text" id="email" placeholder="platzi@example.com" className={styles['input input-email']} />
+            <label for="password" className={styles['label']}>Password</label>
+            <input type="password" id="password" placeholder="*********" className={styles['input input-password']} />
           </div>
-          <input type="submit" value="Create" className={styles.primary-button login-button} />
+          <input type="submit" value="Create" className={styles['primary-button login-button']} />
         </form>
       </div>
     </div>
