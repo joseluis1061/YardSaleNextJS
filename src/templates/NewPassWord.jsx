@@ -6,7 +6,13 @@ export const NewPassWord = () => {
   return (
     <div className={styles.NewPassword}>
       <div className={styles.NewPassword-container}>
-        <Image layout="fill"	 src="./logos/logo_yard_sale.svg" alt="logo" className={styles.logo} />
+        <Image 
+          layout="fill"
+          width="100%" 
+          height="100%" 
+          layout="responsive"	 
+          src="./logos/logo_yard_sale.svg" alt="logo" className={styles.logo} 
+        />
         <h1 className={styles.title}>Create a new password</h1>
         <p className={styles.subtitle}>Enter a new passwrd for yue account</p>
         <form action="/" className={styles.form}>

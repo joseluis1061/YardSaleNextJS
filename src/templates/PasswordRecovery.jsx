@@ -6,7 +6,14 @@ export const PasswordRecovery = () => {
   return (
     <div className={styles.PasswordRecovery}>
 			<div className={styles.PasswordRecovery-container}>
-				<Image layout="fill"	 src="./logos/logo_yard_sale.svg" alt="logo" className={styles.logo} />
+				<Image 
+					layout="fill"	 
+					width="100%" 
+					height="100%" 
+					src="./logos/logo_yard_sale.svg" 
+					alt="logo" 
+					className={styles.logo} 
+				/>
 				<h1 className={styles.title}>Password recovery</h1>
 				<p className={styles.subtitle}>Inform the email address used to create your account</p>
 				<form action="/" className={styles.form}>

@@ -20,7 +20,10 @@ export const MyOrder = () => {
     <aside className={styles.MyOrder}>
 			<div className={styles['MyOrder-container']}>
 				<div className={styles['title-container']}>
-					<Image layout="fill"	 
+					<Image 
+						layout="fill"	 
+						width="100%" 
+						height="100%" 
 						className={styles['more-clickable-area pointer']}
 						src={arrow} 
 						alt="arrow" onClick={() => toggleOrder()} 
@@ -39,7 +42,13 @@ export const MyOrder = () => {
 						</p>
 						<p>${sumTotal()}</p>
 					</div>
-					<Link className={styles['primary-button']} href="/checkout">
+					<Link 
+						layout="fill"	
+						width="100%" 
+						height="100%" 
+						className={styles['primary-button']} 
+						href="/checkout"
+					>
 						Checkout
 					</Link>
 				</div>

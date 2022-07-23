@@ -9,7 +9,7 @@ export const MyAccount = () => {
         <form action="/" className={styles.form}>
           <div>
             <label for="name" className={styles.label}>Name</label>
-            <p className={styles.value">Camila Yokoo</p>
+            <p className={styles.value}>Camila Yokoo</p>
             <label for="email" className={styles.label}>Email</label>
             <p className={styles.value}>camilayokoo@gmail.com</p>
             <label for="password" className={styles.label}>Password</label>
