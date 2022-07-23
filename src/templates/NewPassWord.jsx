@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 import '../styles/NewPassword.scss';
 
 export const NewPassWord = () => {
   return (
     <div className={styles.NewPassword}>
       <div className={styles.NewPassword-container}>
-        <img src="./logos/logo_yard_sale.svg" alt="logo" className={styles.logo} />
+        <Image src="./logos/logo_yard_sale.svg" alt="logo" className={styles.logo} />
         <h1 className={styles.title}>Create a new password</h1>
         <p className={styles.subtitle}>Enter a new passwrd for yue account</p>
         <form action="/" className={styles.form}>

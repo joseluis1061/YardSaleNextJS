@@ -15,3 +15,4 @@ export const useGetProduct = (API) => {
 
   return products;
 };
+
