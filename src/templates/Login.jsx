@@ -18,7 +18,7 @@ export const Login = () => {
   return (
     <div className={styles.Login}>
 			<div className={styles.Login-container}>
-				<Image src={logoYardSale} alt="logo" className={styles.logo} />
+				<Image layout="fill"	 src={logoYardSale} alt="logo" className={styles.logo} />
 				<form action="/" className={styles.form} ref={formulario}>
 					<label htmlFor="email" className={styles.label}>Email address</label>
 					<input type="text" name="email" placeholder="platzi@example.cm" className={styles.input input-email} />
