@@ -12,7 +12,6 @@ export const Order = () => {
 			</p>
 			<p>$560.00</p>
 			<Image 
-				layout="fill"	
 				width="100%" 
 				height="100%"  
 				src={flechita}

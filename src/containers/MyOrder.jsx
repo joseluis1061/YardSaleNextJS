@@ -21,9 +21,8 @@ export const MyOrder = () => {
 			<div className={styles['MyOrder-container']}>
 				<div className={styles['title-container']}>
 					<Image 
-						layout="fill"	 
-						width="100%" 
-						height="100%" 
+						width={20}
+						height={20}
 						className={styles['more-clickable-area pointer']}
 						src={arrow} 
 						alt="arrow" onClick={() => toggleOrder()} 
@@ -43,7 +42,6 @@ export const MyOrder = () => {
 						<p>${sumTotal()}</p>
 					</div>
 					<Link 
-						layout="fill"	
 						width="100%" 
 						height="100%" 
 						className={styles['primary-button']} 
