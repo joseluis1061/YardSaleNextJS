@@ -17,16 +17,16 @@ export const Header = () => {
 		<>
 			<nav className={styles.Nav}>
 				<Image 
-					layout="fill"	 
-					width="100%" 
-					height="100%"
+					 
+					width={30}
+					height={30}
 					src={menu} alt="menu" className={styles.menu} />
 				<div className={styles['navbar-left']}>
 					<Link href="/">
 						<Image 
-							layout="fill"	 
-							width="100%" 
-							height="100%"
+							
+							width={120}  
+							height={80} 
 							src={logo} 
 							alt="logo" 
 							className={styles['nav-logo']} 
@@ -62,10 +62,9 @@ export const Header = () => {
 							// className={styles.['navbar-shopping-cart']}
 							onClick={() => toggleOrder()}
 						>
-							<Image 
-								layout="fill"	 
-								width="100%" 
-								height="100%"
+							<Image 								
+								width={40} 
+								height={40} 
 								className={styles['more-clickable-area pointer']} 
 								src={shoppingCart} alt="shopping cart" />
 								{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
