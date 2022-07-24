@@ -1,11 +1,11 @@
 import React from 'react';
 import { Header } from '../components/Header';
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <div className={styles.Layout}>
-			<Header />
-			{children}
-		</div>
-	);
-}
+      <Header />
+      {children}
+    </div>
+  );
+};

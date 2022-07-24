@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState, useContext } from 'react';
-import {Menu} from '@components/Menu';
-import {MyOrder} from '@containers/MyOrder';
+import { useContext } from 'react';
+import { Menu } from '@components/Menu';
+import { MyOrder } from '@containers/MyOrder';
 import Link from 'next/link';
 import Image from 'next/image';
 import AppContext from '@context/AppContext';
@@ -11,69 +11,53 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
 
 export const Header = () => {
-	const { state, toggleOrder, toggleMenu } = useContext(AppContext);
-	
-	return (
-		<>
-			<nav className={styles.Nav}>
-				<img	
-					src={menu.src} alt="menu" className={styles.menu} 
-				/>
-				<div className={styles['navbar-left']}>
-					<Link href="/">
-						<Image 			
-							layout='fixed'				
-							width={120}  
-							height={80} 
-							src={logo} 
-							alt="logo" 
-							className={styles['nav-logo']} 
-						/>
-					</Link>
-					<ul>
-						<li>
-							<a href="/">All</a>
-						</li>
-						<li>
-							<a href="/">Clothes</a>
-						</li>
-						<li>
-							<a href="/">Electronics</a>
-						</li>
-						<li>
-							<a href="/">Furnitures</a>
-						</li>
-						<li>
-							<a href="/">Toys</a>
-						</li>
-						<li>
-							<a href="/">Others</a>
-						</li>
-					</ul>
-				</div>
-				<div className={styles['navbar-right']}>
-					<ul>
-						<li className={styles['more-clickable-area navbar-email pointer']} onClick={() => toggleMenu()}>
-							platzi@example.com
-						</li>
-						<li
-							// className={styles.['navbar-shopping-cart']}
-							onClick={() => toggleOrder()}
-						>
-							<Image 	
-								layout='fixed'								
-								width={40} 
-								height={40} 
-								className={styles['more-clickable-area pointer']} 
-								src={shoppingCart} alt="shopping cart" />
-								{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
-						</li>
-					</ul>
-					
-				</div>
-				{state.menuIsOpen && <Menu />}
-			</nav>
-			{state.orderIsOpen && <MyOrder />}
-		</>
-	);
-}
+  const { state, toggleOrder, toggleMenu } = useContext(AppContext);
+  return (
+    <>
+      <nav className={styles.Nav}>
+        <img src={menu.src} alt="menu" className={styles.menu} />
+        <div className={styles['navbar-left']}>
+          <Link href="/">
+            <Image layout="fixed" width={120} height={80} src={logo} alt="logo" className={styles['nav-logo']} />
+          </Link>
+          <ul>
+            <li>
+              <Link href="/">Linkll</Link>
+            </li>
+            <li>
+              <Link href="/">Clothes</Link>
+            </li>
+            <li>
+              <Link href="/">Electronics</Link>
+            </li>
+            <li>
+              <Link href="/">Furnitures</Link>
+            </li>
+            <li>
+              <Link href="/">Toys</Link>
+            </li>
+            <li>
+              <Link href="/">Others</Link>
+            </li>
+          </ul>
+        </div>
+        <div className={styles['navbar-right']}>
+          <ul>
+            <li className={styles['more-clickable-area navbar-email pointer']} onClick={() => toggleMenu()}>
+              platzi@example.com
+            </li>
+            <li
+              // className={styles.['navbar-shopping-cart']}
+              onClick={() => toggleOrder()}
+            >
+              <Image layout="fixed" width={40} height={40} className={styles['more-clickable-area pointer']} src={shoppingCart} alt="shopping cart" />
+              {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
+            </li>
+          </ul>
+        </div>
+        {state.menuIsOpen && <Menu />}
+      </nav>
+      {state.orderIsOpen && <MyOrder />}
+    </>
+  );
+};

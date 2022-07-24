@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 a[href],
-input[type="submit"],
-input[type="image"],
+input[type='submit'],
+input[type='image'],
 label[for],
 select,
 button,

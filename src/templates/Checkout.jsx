@@ -1,6 +1,6 @@
 /*****checkout.js****/
 import React from 'react';
-import {OrderItem} from '@components/OrderItem';
+import { OrderItem } from '@components/OrderItem';
 import styles from '@styles/Checkout.module.scss';
 
 const order = {
@@ -13,10 +13,8 @@ const order = {
     name: 'Clothes',
     image: 'https://api.lorem.space/image/fashion?w=640&h=480&r=982',
   },
-  images: [ 'https://api.lorem.space/image/fashion?w=640&h=480&r=290', 
-            'https://api.lorem.space/image/fashion?w=640&h=480&r=363', 
-            'https://api.lorem.space/image/fashion?w=640&h=480&r=747'],
-}
+  images: ['https://api.lorem.space/image/fashion?w=640&h=480&r=290', 'https://api.lorem.space/image/fashion?w=640&h=480&r=363', 'https://api.lorem.space/image/fashion?w=640&h=480&r=747'],
+};
 
 const Checkout = () => {
   return (
@@ -32,10 +30,10 @@ const Checkout = () => {
             <p>$560.00</p>
           </div>
         </div>
-        <OrderItem product={order}/>
+        <OrderItem product={order} />
       </div>
     </div>
   );
-}
+};
 
 export default Checkout;
