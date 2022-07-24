@@ -21,7 +21,8 @@ export const Header = () => {
 				/>
 				<div className={styles['navbar-left']}>
 					<Link href="/">
-						<Image 							
+						<Image 			
+							layout='fixed'				
 							width={120}  
 							height={80} 
 							src={logo} 
@@ -59,7 +60,8 @@ export const Header = () => {
 							// className={styles.['navbar-shopping-cart']}
 							onClick={() => toggleOrder()}
 						>
-							<Image 								
+							<Image 	
+								layout='fixed'								
 								width={40} 
 								height={40} 
 								className={styles['more-clickable-area pointer']} 
