@@ -16,15 +16,12 @@ export const Header = () => {
 	return (
 		<>
 			<nav className={styles.Nav}>
-				<Image 
-					 
-					width={30}
-					height={30}
-					src={menu} alt="menu" className={styles.menu} />
+				<img	
+					src={menu.src} alt="menu" className={styles.menu} 
+				/>
 				<div className={styles['navbar-left']}>
 					<Link href="/">
-						<Image 
-							
+						<Image 							
 							width={120}  
 							height={80} 
 							src={logo} 
@@ -70,6 +67,7 @@ export const Header = () => {
 								{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
 						</li>
 					</ul>
+					
 				</div>
 				{state.menuIsOpen && <Menu />}
 			</nav>
