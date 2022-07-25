@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import '../styles/ProductInfo.scss';
+import styles from '@styles/ProductInfo.module.scss';
 export const ProductInfo = () => {
   return (
     <>

@@ -43,12 +43,13 @@ export const Header = () => {
         </div>
         <div className={styles['navbar-right']}>
           <ul>
-            <li className={styles['more-clickable-area navbar-email pointer']} onClick={() => toggleMenu()}>
-              platzi@example.com
+            <li className={styles['more-clickable-area navbar-email pointer']} onClick={() => toggleMenu()} aria-hidden="true">
+              tuCorreo@example.com
             </li>
             <li
               // className={styles.['navbar-shopping-cart']}
               onClick={() => toggleOrder()}
+              aria-hidden="true"
             >
               <Image layout="fixed" width={40} height={40} className={styles['more-clickable-area pointer']} src={shoppingCart} alt="shopping cart" />
               {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}

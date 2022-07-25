@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import flechita from '@icons/flechita.svg';
-import '@styles/Order.module.scss';
+import styles from '@styles/Order.module.scss';
 
 export const Order = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import '../styles/ShoppingCartItem.scss';
+import styles from '@styles/ShoppingCartItem.module.scss';
 
 export const ShoppingCartItem = () => {
   return (

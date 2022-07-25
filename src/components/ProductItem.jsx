@@ -20,7 +20,7 @@ export const ProductItem = ({ product }) => {
           <p>${product?.price}</p>
           <p>{product?.title}</p>
         </div>
-        <figure className={styles['more-clickable-area']} onClick={() => handleClick(product)}>
+        <figure className={styles['more-clickable-area']} onClick={() => handleClick(product)} aria-hidden="true">
           {state.cart.includes(product) ? (
             <Image width="40%" height="40%" className={styles['disabled add-to-cart-btn']} src={addedToCartImage} alt="added to cart" />
           ) : (
