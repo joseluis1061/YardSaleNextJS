@@ -5,7 +5,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />      
+          <meta charSet="utf-8" />   
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />

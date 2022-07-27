@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPWA = require('next-pwa')
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    register: true,
+    mode: 'production', 
+    disable: false
+  },
   reactStrictMode: true,
   images: {
     domains: [
@@ -9,21 +17,4 @@ const nextConfig = {
       'romapy'
     ],
   },
-  // swcMinify: true,
-  // env: {
-  //   customKey: 'customValue',
-  // },
-  // // basePath: '/dist', 
-  // // Comenta la linea basePath para evitar el error 404
-  // compress: true,
-  // async redirects() {
-  //   return [
-  //     {
-  //       source : '/hola',
-  //       destination: 'https://github.com/joseluis1061', // IMPORTANTE, el link del destino sin / 
-  //       permanent: true,                        // ya que nos dira que no puede encontrar la ruta
-  //     }
-  //   ]
-  // }
-}
-module.exports = nextConfig
+})
